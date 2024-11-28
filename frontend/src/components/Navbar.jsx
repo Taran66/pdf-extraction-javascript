@@ -1,6 +1,9 @@
 import { useState } from "react";
 import arrow from '/assets/arrow.svg'
 import { TypeAnimation } from 'react-type-animation';
+import PerfectScrollbar from 'react-perfect-scrollbar';
+import 'react-perfect-scrollbar/dist/css/styles.css';
+
 
 const Navbar = () => {
   const [message, setMessage] = useState('')
@@ -8,6 +11,7 @@ const Navbar = () => {
 
   const handleChange = (e) => {
       setMessage(e.target.value);
+
   }
 
   const handleSubmit = (e) => {
@@ -25,10 +29,10 @@ const Navbar = () => {
           <span className="text-white group-hover:text-violet-800">Upload PDF</span>
         </button>
       </div>
-      <div className="flex flex-col justify-between h-full mt-5">
-        <div className="rounded-md h-3/4 bg-slate-900 opacity-60 p-5 overflow-y-auto flex-grow">
+      <div className="flex flex-col justify-between h-full mt-5 overflow-hidden">
+            <PerfectScrollbar className="rounded-md h-3/4 bg-slate-900 opacity-60 p-5 overflow-y-scroll flex-grow">
             {messages.map((msg, index) => (
-                <div key={index} className=" bg-slate-600 p-2 my-2 rounded-md w-1/4  text-slate-300 break-words text-left ">
+                <div key={index} className=" bg-slate-600 p-2 my-2 rounded-md w-1/4  text-slate-300 break-words text-left">
                   <TypeAnimation
                     sequence={[msg]}
                     wrapper="span"
@@ -38,8 +42,7 @@ const Navbar = () => {
                   />
                 </div>
             ))}
-        </div>
-        
+            </PerfectScrollbar>
         <form onSubmit={handleSubmit} className="flex mt-5">
             <input 
                 type="text"
