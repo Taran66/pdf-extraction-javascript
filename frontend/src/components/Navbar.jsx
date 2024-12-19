@@ -42,19 +42,18 @@ const Navbar = () => {
       </div>
       <div className="flex flex-col justify-between h-full mt-5 overflow-hidden">
             <div className="rounded-md h-3/4 bg-slate-900 opacity-60 p-5 overflow-y-scroll flex-grow">
+            <div>
             {messages.map((msg, index) => (
-                <div key={index} className=" bg-slate-600 p-2 my-2 rounded-md w-1/4 text-slate-300 break-words text-left">
-                  <TypeAnimation
-                    sequence={[msg]}
-                    wrapper="span"
-                    cursor={true}
-                  />
+                <div key={index} className=" bg-slate-600 p-2 my-2 rounded-md w-1/4 text-slate-200 break-words text-left">
+                  {msg}
+                  
                 </div>
+                
             ))}
             </div>
-            <div className="rounded-md h-3/4 bg-slate-900 opacity-60 p-5 overflow-y-scroll flex-grow">
+            <div>
             {processedMessages.map((msg, index) => (
-                <div key={index} className=" bg-slate-600 p-2 my-2 rounded-md w-1/4 text-slate-300 break-words text-left">
+                <div key={index} className=" bg-slate-600 p-2 my-2 rounded-md w-1/4 text-slate-200 break-words text-left">
                   <TypeAnimation
                     sequence={[msg]}
                     wrapper="span"
@@ -64,6 +63,8 @@ const Navbar = () => {
                 </div>
             ))}
             </div>
+            </div>
+            
         <form onSubmit={handleSubmit} className="flex mt-5">
             <input 
                 type="text"
