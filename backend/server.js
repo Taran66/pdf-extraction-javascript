@@ -12,7 +12,6 @@ const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(bodyParser.json());
 
-// Initialize ChatGroq
 const llm = new ChatGroq({
     groqAIApi: process.env.GROQ_API_KEY,
     temperature: 0,
