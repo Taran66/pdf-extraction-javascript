@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import arrow from '/assets/arrow.svg';
 import { TypeAnimation } from 'react-type-animation';
@@ -32,12 +31,12 @@ const Navbar = () => {
 
   return (
     <div className="flex flex-col justify-between h-screen py-10">
-      <div className="flex justify-between">
+      {/* <div className="flex justify-between">
         <h4 className="text-violet-800 font-bold text-xl">Askify</h4>
         <button className="group border-2 border-white p-2 rounded-md font-bold flex items-center gap-2 hover:border-violet-800">
           <span className="text-white group-hover:text-violet-800">Upload PDF</span>
         </button>
-      </div>
+      </div> */}
       <div className="flex flex-col justify-between h-full mt-5 overflow-hidden">
         <div className="rounded-md h-3/4 bg-slate-900 opacity-60 p-5 overflow-y-scroll flex-grow">
           {conversation.map((msg, index) => (
