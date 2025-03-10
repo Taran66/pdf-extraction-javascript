@@ -4,3 +4,16 @@
   text-align: center;
 }
 
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #e5e7eb;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgb(91, 33, 182);
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgb(76, 29, 149);
+}

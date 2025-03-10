@@ -5,7 +5,15 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      scrollbar: {
+        thumb: {
+          DEFAULT: '#3b82f6', 
+          hover: '#2563eb', 
+        },
+        track: '#e5e7eb', 
+      },
+    },
   },
   plugins: [],
 }
