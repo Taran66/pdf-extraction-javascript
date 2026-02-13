@@ -1,22 +1,21 @@
 {
-  "name": "backend3",
+  "name": "backend",
   "version": "1.0.0",
-  "main": "server.js",
-  "type": "module",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
+  "description": "backend for AI data extraction application",
+  "keywords": [
+    "backend",
+    "AI",
+    "Extraction"
+  ],
   "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "@langchain/groq": "^0.1.2",
-    "@langchain/langgraph": "^0.2.38",
-    "body-parser": "^1.20.3",
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.7",
-    "express": "^4.21.2",
-    "multer": "^1.4.5-lts.1"
+  "author": "Taranpreet Singh",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11",
+    "prettier": "^3.8.1"
   }
 }
