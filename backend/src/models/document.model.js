@@ -32,3 +32,5 @@ const docSchema = new Scehma(
         timestamps: true
     }
 )
+
+userSchema.pre("save", asy)
