@@ -1,4 +1,5 @@
 import mongoose, {Schema} from 'mongoose'
+import mongooseAggregatePaginate from 'mongoose-aggregate-paginate-v2'
 
 const docSchema = new Scehma(
     {
@@ -33,4 +34,7 @@ const docSchema = new Scehma(
     }
 )
 
-userSchema.pre("save", asy)
+docSchema.plugin(mongooseAggregatePaginate)
+
+export const Document = mongoose.model("Document", docSchema)
+
