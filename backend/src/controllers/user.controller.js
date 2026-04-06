@@ -28,6 +28,11 @@ const registerUser = asyncHandler( async (req, res) => {
 
     // change the user.routes.js using reference and then add the localpath from middleware .files method
 
+    const profileLocalPath = req.file?.path;
+
+    console.log(req.file);
+    console.log(profileLocalPath);
+
 
 })
 

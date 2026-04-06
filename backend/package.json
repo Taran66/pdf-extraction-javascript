@@ -19,6 +19,7 @@
     "prettier": "^3.8.1"
   },
   "dependencies": {
+    "@azure/storage-blob": "^12.31.0",
     "bcrypt": "^6.0.0",
     "cloudinary": "^2.9.0",
     "cookie-parser": "^1.4.7",

@@ -15,7 +15,7 @@ app.use(express.static("public"))
 app.use(cookieParser())
 
 import userRoutes from './routes/user.routes.js'
-import { registerUser } from "./controllers/user.controller.js"
+
 
 app.use(express.json()); // important for req.body
 app.use("/api/users", userRoutes);
